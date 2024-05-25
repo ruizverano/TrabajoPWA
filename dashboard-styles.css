@@ -1,0 +1,130 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #003366, #000033);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Usar min-height en lugar de height para asegurar que el cuerpo cubra al menos toda la pantalla */
+    color: #333;
+}
+
+.dashboard-container {
+    width: 90%; /* Mejor uso del espacio disponible */
+    max-width: 600px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px; /* Añadir margen alrededor del contenedor */
+
+}
+
+h1 {
+    color: #0056b3;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select {
+    width: calc(100% - 20px); /* Ajustar el ancho para tener en cuenta el relleno */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.submit-button:hover {
+    background-color: #003366;
+}
+
+a.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #0056b3;
+    text-decoration: none;
+}
+
+/* Estilos para los botones de opciones y botón de cierre de sesión */
+.dashboard-option,
+.logout-button {
+    display: block;
+    padding: 15px;
+    border-radius: 44px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.dashboard-option {
+    background-color: #0056b3;
+}
+
+.dashboard-option:hover {
+    background-color: #003366;
+}
+
+.logout-button {
+    background-color: #d9534f;
+}
+
+.logout-button:hover {
+    background-color: #c9302c;
+}
+
+.footer {
+    margin-top: 20px;
+    padding: 10px 0;
+    text-align: center;
+    color: #666;
+    font-size: 0.8em;
+}
+
+table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        td.actions {
+            text-align: center;
+        }
+        .delete-button {
+            padding: 5px 10px;
+            background-color: #f44336;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }

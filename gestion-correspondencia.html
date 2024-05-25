@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Correspondencia - LlanuraPH</title>
+    <link rel="stylesheet" href="dashboard-styles.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+</head>
+<body>
+    <div class="dashboard-container">
+        <img src="images/logo_empresa.png" alt="Logo de la Empresa" class="login-logo">
+        <h1>Gestión de Correspondencia</h1>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Destinatario</th>
+                    <th>Asunto</th>
+                    <th>Mensaje</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($comunicaciones as $comunicacion): ?>
+                    <tr>
+                        <td><?= $comunicacion['fecha_hora'] ?></td>
+                        <td><?= $comunicacion['destinatario'] ?></td>
+                        <td><?= $comunicacion['asunto'] ?></td>
+                        <td><?= $comunicacion['comunicado'] ?></td>
+                        <td class="actions">
+                            <form action="gestion-correspondencia.php" method="post">
+                                <input type="hidden" name="eliminar" value="<?= $comunicacion['id'] ?>">
+                                <button type="submit" class="delete-button">Eliminar</button>
+                            </form>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+        <a href="dashboard.php" class="back-link">Volver al Dashboard</a>
+        <footer class="footer">
+            <p>&copy; 2024 Llanura P.H. Todos los derechos reservados. Juan Carlos Alvarado Garzón</p>
+        </footer>
+    </div>
+</body>
+</html>

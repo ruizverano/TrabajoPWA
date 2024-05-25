@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Usuarios - LlanuraPH</title>
+    <link rel="stylesheet" href="dashboard-styles.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <img src="images/logo_empresa.png" alt="Logo de la Empresa" class="login-logo">
+        <h1>Gestión de Usuarios</h1>
+        <?php if ($mensaje) : ?>
+            <p class="success-message"><?= $mensaje ?></p>
+        <?php endif; ?>
+        <?php if ($error) : ?>
+            <p class="error-message"><?= $error ?></p>
+        <?php endif; ?>
+        <form action="gestion-usuarios.php" method="post" class="user-form">
+            <div class="input-group">
+                <label for="nombres">Nombres:</label>
+                <input type="text" id="nombres" name="nombres" required placeholder="Ingrese los nombres completos">
+            </div>
+            <div class="input-group">
+                <label for="usuario">Usuario:</label>
+                <input type="text" id="usuario" name="usuario" required placeholder="Nombre de usuario">
+            </div>
+            <div class="input-group">
+                <label for="rol_id">Rol:</label>
+                <select id="rol_id" name="rol_id" required>
+                    <option value="">Seleccione un rol</option>
+                    <option value="1">Superadministrador</option>
+                    <option value="2">Administrador</option>
+                    <option value="3">Residente</option>
+                    <option value="4">Portero</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="contraseña">Contraseña:</label>
+                <input type="password" id="contraseña" name="contraseña" required placeholder="Crear contraseña">
+            </div>
+            <div class="input-group">
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" required placeholder="ejemplo@correo.com">
+            </div>
+            <div class="input-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="text" id="telefono" name="telefono" placeholder="Número de teléfono">
+            </div>
+            <div class="input-group">
+                <label for="torre">Torre:</label>
+                <input type="text" id="torre" name="torre" placeholder="Número de torre">
+            </div>
+            <div class="input-group">
+                <label for="apartamento">Apartamento:</label>
+                <input type="text" id="apartamento" name="apartamento" placeholder="Número de apartamento">
+            </div>
+            
+            <div class="input-group">
+                <label for="fecha_registro">Fecha de Registro:</label>
+                <input type="date" id="fecha_registro" name="fecha_registro" required>
+            </div>
+            <button type="submit" class="submit-button">Registrar usuario</button>
+        </form>
+        <a href="dashboard.php" class="back-link">Volver al Dashboard</a>
+        <footer class="footer">
+            <p>&copy; 2024 Llanura P.H. Todos los derechos reservados. Juan Carlos Alvarado Garzón</p>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #003366, #000033);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.dashboard-container {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.dashboard-header, .dashboard-footer {
+    text-align: center;
+}
+
+.content-section {
+    margin-bottom: 20px;
+}
+
+.message {
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.message-meta, .message-body, .no-messages {
+    text-align: left;
+}
+
+.message-date, .message-sender {
+    color: #888;
+    font-size: 14px;
+}
+
+.logout-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    background-color: #c9302c;
+}
+
+.dashboard-footer {
+    margin-top: 20px;
+    padding: 10px 0;
+    font-size: 0.8em;
+    color: #666;
+}
